@@ -90,7 +90,7 @@ myApp.config([`$routeProvider`, function($routeProvider) {
         {key: `emailFailure`,
         titleFirstWord: `Email`,
         titleRestWords: `Not Sent`,
-        message: [`Uh-oh. E-mail services are down right now, but we're working to fix this as soon as possible.`, `In the meantime, feel free to contact me at...`],
+        message: [`Uh-oh. E-mail services are down right now, but we're working to fix this as soon as possible.`, `In the meantime, feel free to contact me at chriswongsickhong@gmail.com or (918) 271-9352`],
         okLabel: ``,
         retryLabel: ``,
         cancelLabel: `Return`}                                 
