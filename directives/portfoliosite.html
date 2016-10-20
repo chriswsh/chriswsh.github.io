@@ -1,0 +1,12 @@
+<div class="wsh-PortfolioBlock">
+    <h3 class="wsh-u-sectionSubheader wsh-u-largeOnly">{{ data.title }}</h3>
+    <div class="wsh-u-smallOnly wsh-PortfolioBlock-smallImage">
+        <p><img src="{{ data.imgSmall }}" alt="{{ data.imgSmallAlt }}" class="wsh-u-shadow"></p>
+    </div>
+    <div>
+        <p ng-repeat="paragraph in data.text track by $index" class="wsh-PortfolioBlock-description">{{ paragraph }}</p>
+    </div>
+    <div class="wsh-u-largeOnly" class="wsh-PortfolioBlock-largeImage">
+        <img src="{{ data.imgLarge }}" alt="{{ data.imgLargeAlt }}" class="wsh-u-shadowDiffuse">
+    </div>
+</div>

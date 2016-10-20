@@ -1,0 +1,22 @@
+<h2 id="main-header" class="wsh-u-sectionHeader"><span class="wsh-u-firstWord">Contact</span> Me</h2>
+<p>I'd love to hear from you! You'll get a confirmation e-mail so you'll know this was successfully sent.</p>
+
+<form role="form" class="wsh-Form">
+    <div class="wsh-Form-group">
+        <label for="contact-name" class="wsh-Form-label wsh-u-sectionSubheader">Name</label>
+        <input type="text" id="contact-name" class="wsh-Form-text wsh-ContactForm-textInput" ng-model="email.contact">
+        <p class="wsh-Form-error" ng-if="email.contactError !== ''">{{ email.contactError }}</p>
+    </div>
+    <div class="wsh-Form-group">
+        <label for="contact-email" class="wsh-Form-label wsh-u-sectionSubheader">Email</label>
+        <input type="email" id="contact-email" class="wsh-Form-text wsh-Form-emailInput" ng-model="email.from">
+        <p class="wsh-Form-error" ng-if="email.fromError !== ''">{{ email.fromError }}</p>    </div>
+    <div class="wsh-Form-group">
+        <label for="contact-message" class="wsh-Form-label wsh-u-sectionSubheader">Message</label>
+        <textarea rows="10" id="contact-message" class="wsh-Form-textAreaInput" ng-model="email.message"></textarea>
+        <p class="wsh-Form-error" ng-if="email.messageError !== ''">{{ email.messageError }}</p>
+    </div>
+    <!-- Using type="button" instead of type="submit" to avoid default behavior regarding e-mail formatting -->
+    <button type="button" class="wsh-Button wsh-Button--submit wsh-u-sectionSubheader" ng-click="sendEmail()">Send E-mail!</button>
+    <p ng-if="email.success">Thank you for your email! A confirmation has been sent.</p>
+</form>
