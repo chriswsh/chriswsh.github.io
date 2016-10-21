@@ -353,7 +353,7 @@
 
 .wsh-Form-text {
     width: 22em;
-    min-width: 22em;
+    max-width: 80%;
     display: block;
     border-radius: 1em;
     padding: 0.625em;
@@ -372,7 +372,7 @@
 
 .wsh-Form-textAreaInput {
     width: 22em;
-    min-width: 22em;
+    max-width: 80%;
     display: block;
     resize: none;
     
@@ -486,6 +486,7 @@
 .wsh-Dialog-button {
     float: left;
     width: 20%;
+    min-width: 6em;
     padding: 0.625em 1.25em;
     margin-right: 1em;
     background-color: white;
