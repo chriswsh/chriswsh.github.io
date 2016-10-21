@@ -90,7 +90,7 @@ myApp.config([`$routeProvider`, function($routeProvider) {
         {key: `emailFailure`,
         titleFirstWord: `Email`,
         titleRestWords: `Not Sent`,
-        message: [`Uh-oh. E-mail services are down right now, but we're working to fix this as soon as possible.`, `In the meantime, feel free to contact me at chriswongsickhong@gmail.com or (918) 271-9352`],
+        message: [`Uh-oh. E-mail services are down right now, but we're working to fix this as soon as possible.`, `In the meantime, feel free to contact me at...`],
         okLabel: ``,
         retryLabel: ``,
         cancelLabel: `Return`}                                 
@@ -446,8 +446,10 @@ myApp.controller(`parentController`, [`$scope`, `$location`, `$http`, `$window`,
             messageError: ``,
             success: true
         }
-    }
         
+        document.getElementById(`contact-name`).focus();
+    }
+
     // Setting object equality to true in order to check for changes in object properties
     $scope.$watch(`email`, function(newValue, oldValue, scope) {
         if (newValue.contact !== `` || newValue.from !== `` || newValue.message !== ``) {
@@ -475,7 +477,7 @@ myApp.controller(`parentController`, [`$scope`, `$location`, `$http`, `$window`,
         }
         else {
             $scope.email.messageError = ``;
-        }        
+        }
     }, true);
     
     // Catch the path change event emitted from the subcontroller
