@@ -17,6 +17,7 @@
         <p class="wsh-Form-error" ng-if="email.messageError !== ''">{{ email.messageError }}</p>
     </div>
     <!-- Using type="button" instead of type="submit" to avoid default behavior regarding e-mail formatting -->
-    <button type="button" class="wsh-Button wsh-Button--submit wsh-u-sectionSubheader" ng-click="sendEmail()">Send E-mail!</button>
+    <button type="button" class="wsh-Button wsh-Button--submit wsh-u-sectionSubheader" ng-click="sendEmail()">Send!</button>
+    <button type="button" class="wsh-Button wsh-Button--submit wsh-u-sectionSubheader" ng-click="resetEmail()">Clear</button>
     <p ng-if="email.success">Thank you for your email! A confirmation has been sent.</p>
 </form>
