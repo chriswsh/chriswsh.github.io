@@ -453,7 +453,7 @@
 .wsh-Dialog-contentFrame {
     background-color: white;
     background-image: url('/images/header.jpg');
-    width: 50%;
+    width: 70%;
     max-width: 35em;
     display: inline-block;
     vertical-align: middle;
@@ -611,7 +611,10 @@
         padding-left: 0.625em;
         padding-right: 0.625em;
     }
-    
+
+    .wsh-Dialog-contentFrame {
+        width: 90%;
+    }
 }
 
 @media only screen and (min-width: 720px) {
@@ -646,6 +649,10 @@
     
     .wsh-PictogramNav {
         margin-top: 1em;
+    }
+    
+    .wsh-Dialog-contentFrame {
+        width: 50%;
     }
 }
 
