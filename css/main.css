@@ -401,7 +401,6 @@
     background-image: url('/images/nav-bg-light2.png');
     padding: 0.625em;
     margin: 0 0.625em 0.625em 0;
-    width: 25%;
     min-width: 5em;
     text-decoration: none;
     border: 1px solid #4d52bd;
@@ -617,7 +616,7 @@
     }
 }
 
-@media only screen and (min-width: 720px) {
+@media only screen and (min-width: 940px) {
     .wsh-u-floatLeftLarge {
         float: left;
     }
@@ -640,6 +639,7 @@
     
     .wsh-u-Row {
         width: 53em;
+        max-width: 95%;
         margin: auto;
     }
     
@@ -661,6 +661,14 @@
     .wsh-u-Row {
         width: 80em;
         margin: auto;
+    }
+    
+    .wsh-Form-text {
+        width: 40em;
+    }
+    
+    .wsh-Form-textAreaInput {
+        width: 40em;
     }
 }
 
