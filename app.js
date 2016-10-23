@@ -90,7 +90,7 @@ myApp.config([`$routeProvider`, function($routeProvider) {
         {key: `emailFailure`,
         titleFirstWord: `Email`,
         titleRestWords: `Not Sent`,
-        message: [`Uh-oh. E-mail services are down right now, but we're working to fix this as soon as possible.`, `In the meantime, feel free to contact me at...`],
+        message: [`Uh-oh. E-mail services are down right now, but we're working to fix this as soon as possible.`, `In the meantime, feel free to contact me at chris (at) chriswsh (dot) com or (918) 271-9352.`],
         okLabel: ``,
         retryLabel: ``,
         cancelLabel: `Return`}                                 
@@ -307,7 +307,7 @@ myApp.directive(`portfolioSite`, function() {
 });
 
 // Set up Dialog Box Directive
-myApp.directive(`wshDialog`, function() {
+myApp.directive(`wshDialog`, function($compile) {
     return {
         restrict: `E`,
         require: `^parentController`,
@@ -414,11 +414,7 @@ myApp.controller(`parentController`, [`$scope`, `$location`, `$http`, `$window`,
     $scope.navBar = navProvider.getNavBar();
     $scope.portfolio = portfolioProvider.getPortfolio();
     $scope.rerouteTimer = 0;
-    $scope.htmlTest = `Nothing Yet`;
-
-    
-    $scope.emailDirty = false;
-    
+        
     $scope.dialog = {}
     $scope.email = {
         contact: ``,
@@ -429,7 +425,7 @@ myApp.controller(`parentController`, [`$scope`, `$location`, `$http`, `$window`,
         messageError: ``,
         success: true
     }
-
+    $scope.emailDirty = false;
     
     $scope.changePath = function(path) {
         if ($location.path())
@@ -515,7 +511,7 @@ myApp.controller(`parentController`, [`$scope`, `$location`, `$http`, `$window`,
     // Send e-mail
     $scope.sendEmail = function() {
         var _ok = true;
-        // Data validation goes here
+        // Data validation errors go higher
         // Check for empty fields
         if ($scope.email.contact === ``) _ok = false;
         

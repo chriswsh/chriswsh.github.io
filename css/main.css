@@ -535,6 +535,13 @@
     color: #4d52bd;
 }
 
+.wsh-u-em {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: bold;
+    font-family: 'alegreya-regular';
+}
+
 .wsh-u-imgLink {
     padding: 0;
 }
