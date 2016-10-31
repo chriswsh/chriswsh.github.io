@@ -120,7 +120,7 @@ myApp.config([`$routeProvider`, function($routeProvider) {
         key: `emailSuccess`,
         titleFirstWord: `Email`,
         titleRestWords: `Sent`,
-        message: [`Thanks for contacing me! I'll reach out to you shortly with a reply.`],
+        message: [`Thanks for contacting me! I'll reach out to you shortly with a reply.`],
         okLabel: `Cool!`,
         retryLabel: ``,
         cancelLabel: ``},
