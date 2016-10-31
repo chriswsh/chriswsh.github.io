@@ -1,5 +1,51 @@
 `use strict`;
-var myApp = angular.module(`portfolioApp`, [`ngRoute`]);
+var myApp = angular.module(`portfolioApp`, [`ngRoute`], function($httpProvider) {
+/* from http://victorblog.com/2012/12/20/make-angularjs-http-service-behave-like-jquery-ajax/ */
+    
+    $httpProvider.defaults.headers.post[`Content-Type`] = `application/x-www-form-urlencoded;charset=utf-8`;
+
+ /**
+   * The workhorse; converts an object to x-www-form-urlencoded serialization.
+   * @param {Object} obj
+   * @return {String}
+   */ 
+  var param = function(obj) {
+    var query = '', name, value, fullSubName, subName, subValue, innerObj, i;
+
+    for(name in obj) {
+      value = obj[name];
+
+      if(value instanceof Array) {
+        for(i=0; i<value.length; ++i) {
+          subValue = value[i];
+          fullSubName = name + '[' + i + ']';
+          innerObj = {};
+          innerObj[fullSubName] = subValue;
+          query += param(innerObj) + '&';
+        }
+      }
+      else if(value instanceof Object) {
+        for(subName in value) {
+          subValue = value[subName];
+          fullSubName = name + '[' + subName + ']';
+          innerObj = {};
+          innerObj[fullSubName] = subValue;
+          query += param(innerObj) + '&';
+        }
+      }
+      else if(value !== undefined && value !== null)
+        query += encodeURIComponent(name) + '=' + encodeURIComponent(value) + '&';
+    }
+
+    return query.length ? query.substr(0, query.length - 1) : query;
+  };
+
+  // Override $http service's default transformRequest
+  $httpProvider.defaults.transformRequest = [function(data) {
+    return angular.isObject(data) && String(data) !== '[object File]' ? param(data) : data;
+  }];
+
+});
 
 // Set Up Routes
 myApp.config([`$routeProvider`, function($routeProvider) {
@@ -74,7 +120,7 @@ myApp.config([`$routeProvider`, function($routeProvider) {
         key: `emailSuccess`,
         titleFirstWord: `Email`,
         titleRestWords: `Sent`,
-        message: [`Thanks for emailing! A confirmation will be sent shortly.`, `(Check your spam folder if it doesn't arrive.)`],
+        message: [`Thanks for contacing me! I'll reach out to you shortly with a reply.`],
         okLabel: `Cool!`,
         retryLabel: ``,
         cancelLabel: ``},
@@ -93,8 +139,37 @@ myApp.config([`$routeProvider`, function($routeProvider) {
         message: [`Uh-oh. E-mail services are down right now, but we're working to fix this as soon as possible.`, `In the meantime, feel free to contact me at chris (at) chriswsh (dot) com or (918) 271-9352.`],
         okLabel: ``,
         retryLabel: ``,
-        cancelLabel: `Return`}                                 
+        cancelLabel: `Return`}                                        
     ]);
+
+/*
+    dialogProviderProvider.configDialog([{
+        key: `emailSuccess`,
+        titleFirstWord: `Email`,
+        titleRestWords: `Sent`,
+        message: `<p>Thanks for emailing! A confirmation will be sent shortly.</p><p>(Check your spam folder if it doesn't arrive.)</p>`,
+        okLabel: `Cool!`,
+        retryLabel: ``,
+        cancelLabel: ``},
+       
+        {key: `emailMalformed`,
+        titleFirstWord: `Email`,
+        titleRestWords: `Not Sent`,
+        message: `<p>Hmm...something about your e-mail doesn't smell right.</p><p>Did you remember to fill out all fields</p>`,
+        okLabel: ``,
+        retryLabel: ``,
+        cancelLabel: `Return`},
+        
+        {key: `emailFailure`,
+        titleFirstWord: `Email`,
+        titleRestWords: `Not Sent`,
+        message: `<p>Uh-oh. E-mail services are down right now, but we're working to fix this as soon as possible.</p><p>In the meantime, feel free to contact me at chris (at) chriswsh (dot) com or (918) 271-9352.</p>`,
+        okLabel: ``,
+        retryLabel: ``,
+        cancelLabel: `Return`}                                        
+    ]);
+*/
+
 }]);
 
 // Set Up Nav Bar Provider
@@ -319,6 +394,35 @@ myApp.directive(`wshDialog`, function($compile) {
     }
 });
 
+/*
+// Set up Dialog Box Directive
+myApp.directive(`wshDialog`, function($compile) {
+    var linker = function(scope, elem, attrs, controllers) { 
+        alert ('linker');
+        var el = angular.element(scope.data.message);
+        console.log(elem);
+        elem.append(el);
+
+        document.querySelector('.wsh-Dialog-message').append("<b>Test</b>");
+    }
+    
+    return {
+        restrict: `E`,
+        transclude: true,
+        require: `^parentController`,
+        scope: {
+            data: `=`,
+            close: `&`
+        },
+        templateUrl: `directives/wshdialog2.html`,
+        link: linker,
+        controller: [`$scope`, function wshDialogController($scope) {
+            $scope.test = $scope.data.message;
+        }]
+    }
+});
+*/
+
 // Testing AJAX service
 myApp.service(`contactService`, [`$log`, `$http`, function($log, $http){
     
@@ -525,11 +629,17 @@ myApp.controller(`parentController`, [`$scope`, `$location`, `$http`, `$window`,
             return false;
         }
         
-        $http.post(`https://www.chriswsh.com/php/test.php`, $scope.email).then(function onSuccess() {
-            $scope.dialog = dialogProvider.getDialog(`emailSuccess`, true);
-            $scope.dialog.active = true;
+        $http.post(`https://www.chriswsh.com/php/index.php`, $scope.email, {headers: `Content-Type: application/x-www-form-urlencoded`}).then(function onSuccess(response) {
+            if (response.data === `1`) {
+                $scope.dialog = dialogProvider.getDialog(`emailSuccess`, true);
+                $scope.dialog.active = true;
+            }
+            else {
+                $scope.dialog = dialogProvider.getDialog(`emailFailure`, true);
+                $scope.dialog.active = true;
+            }
         })
-        .catch(function onFailure() {
+        .catch(function onFailure(response) {
             $scope.dialog = dialogProvider.getDialog(`emailFailure`, true);
             $scope.dialog.active = true;
         });
