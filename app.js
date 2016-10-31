@@ -629,7 +629,7 @@ myApp.controller(`parentController`, [`$scope`, `$location`, `$http`, `$window`,
             return false;
         }
         
-        $http.post(`https://www.chriswsh.com/php/index.php`, $scope.email, {headers: `Content-Type: application/x-www-form-urlencoded`}).then(function onSuccess(response) {
+        $http.post(`https://www.chriswsh.com/php/email.php`, $scope.email).then(function onSuccess(response) {
             if (response.data === `1`) {
                 $scope.dialog = dialogProvider.getDialog(`emailSuccess`, true);
                 $scope.dialog.active = true;
