@@ -145,7 +145,7 @@ myApp.config([`$routeProvider`, function($routeProvider) {
         cancelLabel: `Return`}                                        
     ]);
 
-/*
+/* Alternate config for more advanced dialog box - in process for now
     dialogProviderProvider.configDialog([{
         key: `emailSuccess`,
         titleFirstWord: `Email`,
@@ -428,7 +428,7 @@ myApp.directive(`wshDialog`, function($compile) {
 
 // Testing AJAX service
 myApp.service(`contactService`, [`$log`, `$http`, function($log, $http){
-    
+    // To Do - move email code from controller to service
 }]);
 
 // Redirect Service
@@ -470,7 +470,7 @@ myApp.service(`redirectService`, [`$timeout`, `$q`, function ($timeout, $q) {
         // check for correct types
         if (typeof delay !== `number` || typeof path !== `string`) return false;
         
-        // turn delay into an integer >= 1
+        // turn delay into an integer >= 0
         delay = delay >> 0;
         if (delay < 0) delay = 0;
 
@@ -490,7 +490,9 @@ myApp.service(`redirectService`, [`$timeout`, `$q`, function ($timeout, $q) {
     
     // Reset the timer
     this.resetTimer = function(delay, path) {
-        
+        // I'm not sure if this functionality adds anything beyond cancelTimer and initTimer.
+        // It may confuse the issue in the controller. Making the calls to cancelTimer and initTimer
+        // explicit may help keep the logic clearer. I'm still up in the air on this one.
     }
     
     // Cancel the timer and reject promise
