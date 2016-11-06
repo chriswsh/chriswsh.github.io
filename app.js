@@ -1,3 +1,6 @@
+/* Note - For ease of download and display, I've got the JavaScript in one file      */
+/* For a production environment, separation into modules and minification, of course */
+
 `use strict`;
 var myApp = angular.module(`portfolioApp`, [`ngRoute`], function($httpProvider) {
 /* from http://victorblog.com/2012/12/20/make-angularjs-http-service-behave-like-jquery-ajax/ */
@@ -395,7 +398,7 @@ myApp.directive(`wshDialog`, function($compile) {
 });
 
 /*
-// Set up Dialog Box Directive
+// Set up Dialog Box Directive - more complicated version, in progress for now
 myApp.directive(`wshDialog`, function($compile) {
     var linker = function(scope, elem, attrs, controllers) { 
         alert ('linker');
@@ -612,7 +615,7 @@ myApp.controller(`parentController`, [`$scope`, `$location`, `$http`, `$window`,
         $window.scrollTo(0,0);
     });
     
-    // Send e-mail
+    // Send e-mail - put in email service later
     $scope.sendEmail = function() {
         var _ok = true;
         // Data validation errors go higher

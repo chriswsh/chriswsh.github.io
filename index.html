@@ -13,11 +13,29 @@
         <meta property="og:title" content="Chris Wong Sick Hong's Web Development Portfolio">
         <meta property="og:description" content="Chris Wong Sick Hong's web development portfolio.">
         <meta itemprop="name" content="Chris Wong Sick Hong's Web Development Portfolio">
-        <meta itemprop="description" content="Chris Wong Sick Hong's web development portfolio." />
+        <meta itemprop="description" content="Chris Wong Sick Hong's web development portfolio.">
         
-        <!--
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-        -->
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="favicon/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicon/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="favicon/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="favicon/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="favicon/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="favicon/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="favicon/apple-touch-icon-152x152.png">
+        <link rel="icon" type="image/png" href="favicon/favicon-196x196.png" sizes="196x196">
+        <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="favicon/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="favicon/favicon-16x16.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="favicon/favicon-128.png" sizes="128x128">
+        <meta name="application-name" content="Chris Wong Sick Hong's Web Development Portfolio">
+        <meta name="msapplication-TileColor" content="#FFFFFF">
+        <meta name="msapplication-TileImage" content="favcion/mstile-144x144.png">
+        <meta name="msapplication-square70x70logo" content="favcion/mstile-70x70.png">
+        <meta name="msapplication-square150x150logo" content="favcion/mstile-150x150.png">
+        <meta name="msapplication-wide310x150logo" content="favcion/mstile-310x150.png">
+        <meta name="msapplication-square310x310logo" content="favcion/mstile-310x310.png">
+        
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
         <script src="app.js"></script>
@@ -26,45 +44,48 @@
         <link rel="stylesheet" type="text/css" href="css/main.css">
     </head>
     
-    <body ng-cloak class="wsh-Body">        
-        <header role="banner" class="wsh-Header">
-            <div class="wsh-u-Row wsh-Header-nameBanner">
-                <h1 class="wsh-u-pageHeader wsh-u-floatLeftLarge"><a href="index.html#/" class="wsh-Header-a"><span class="wsh-u-firstWord">Chris</span> Wong Sick Hong</a></h1>
-                <nav role="navigation" class="wsh-PictogramNav wsh-u-floatRightLarge">
-                    <a class="wsh-PictogramNav-a" ng-click="changePath('ui')" href=""><span aria-hidden="true" class="wsh-PictogramNav-a-iconSpan" data-icon="U"></span><span class="wsh-u-srOnly">UI/UX Design</span></a>
-                    <a class="wsh-PictogramNav-a" ng-click="changePath('responsive')" href=""><span aria-hidden="true" class="wsh-PictogramNav-a-iconSpan" data-icon="("></span><span class="wsh-u-srOnly">UI/UX Design</span></a>
-                    <a class="wsh-PictogramNav-a" ng-click="changePath('techdoc')" href=""><span aria-hidden="true" class="wsh-PictogramNav-a-iconSpan" data-icon="r"></span><span class="wsh-u-srOnly">UI/UX Design</span></a>
-                    <a class="wsh-PictogramNav-a" ng-click="changePath('contact')" href=""><span aria-hidden="true" class="wsh-PictogramNav-a-iconSpan" data-icon="b"></span><span class="wsh-u-srOnly">UI/UX Design</span></a>
-                </nav>
-            </div><!--/.wsh-u-Row-->
-            <div id="content-header" ng-if="content-header" class="wsh-Row wsh-Header-contentHeader">
-                {{ content-header }}
-            </div>
-        </header>
+    <body ng-cloak class="wsh-Body">  
+        <div class="wsh-u-fullHeightWrapper">
+            <header role="banner" class="wsh-Header">
+                <div class="wsh-u-Row wsh-Header-nameBanner">
+                    <h1 class="wsh-u-pageHeader wsh-u-floatLeftLarge"><a href="index.html#/" class="wsh-Header-a"><span class="wsh-u-firstWord">Chris</span> Wong Sick Hong</a></h1>
+                    <nav role="navigation" class="wsh-PictogramNav wsh-u-floatRightLarge">
+                        <a class="wsh-PictogramNav-a" ng-click="changePath('ui')" href=""><span aria-hidden="true" class="wsh-PictogramNav-a-iconSpan" data-icon="U"></span><span class="wsh-u-srOnly">UI/UX Design</span></a>
+                        <a class="wsh-PictogramNav-a" ng-click="changePath('responsive')" href=""><span aria-hidden="true" class="wsh-PictogramNav-a-iconSpan" data-icon="("></span><span class="wsh-u-srOnly">UI/UX Design</span></a>
+                        <a class="wsh-PictogramNav-a" ng-click="changePath('techdoc')" href=""><span aria-hidden="true" class="wsh-PictogramNav-a-iconSpan" data-icon="r"></span><span class="wsh-u-srOnly">UI/UX Design</span></a>
+                        <a class="wsh-PictogramNav-a" ng-click="changePath('contact')" href=""><span aria-hidden="true" class="wsh-PictogramNav-a-iconSpan" data-icon="b"></span><span class="wsh-u-srOnly">UI/UX Design</span></a>
+                    </nav>
+                </div><!--/.wsh-u-Row-->
+                <div id="content-header" ng-if="content-header" class="wsh-Row wsh-Header-contentHeader">
+                    {{ content-header }}
+                </div>
+            </header>
 
-        <div class="wsh-u-Row">
-            <nav role="navigation" aria-label="Navigation Buttons" class="wsh-NavBar wsh-NavBar--insetRight wsh-u-largeOnly">
-                <!-- Note to Self: must track by $index when iterating over arrays, but not objects -->
-                <a role="button" href="" ng-repeat="navItem in navBar track by $index" ng-click="changePath(navItem.url)" class="wsh-NavBar-a" ng-class="{ 'wsh-NavBar-a--activeInsetRight': navItem.active, 'wsh-NavBar-a--inactiveInsetRight': !navItem.active }">
-                    <h2 class="wsh-u-sectionHeader"><span class="wsh-u-firstWord">{{ navItem.firstWord }}</span> {{ navItem.nextWords }}</h2>
-                </a>
-            </nav>
-            <main role="main" aria-labelledby="main-header" class="wsh-MainContent">
-                <!-- Angular SPA transclusion here -->
-                <ng-view></ng-view>
-            </main>
-        </div><!-- /.wsh-u-Row -->
-        <div class="wsh-u-Row">
-            <nav role="navigation" aria-label="Navigation Buttons" class="wsh-NavBar wsh-NavBar--bottom wsh-u-smallOnly">
-                <a role="button" href="" ng-repeat="navItem in navBar track by $index" ng-click="changePath(navItem.url, $event)" class="wsh-NavBar-a" ng-class="{ 'wsh-NavBar-a--activeBottom': navItem.active, 'wsh-NavBar-a--inactiveBottom': !navItem.active }">
-                    <h2 class="wsh-u-sectionHeader"><span class="wsh-u-firstWord">{{ navItem.firstWord }}</span> {{ navItem.nextWords }}</h2>
-                </a>
-            </nav>
+            <div class="wsh-u-Row">
+                <nav role="navigation" aria-label="Navigation Buttons" class="wsh-NavBar wsh-NavBar--insetRight wsh-u-largeOnly">
+                    <!-- Note to Self: must track by $index when iterating over arrays, but not objects -->
+                    <a role="button" href="" ng-repeat="navItem in navBar track by $index" ng-click="changePath(navItem.url)" class="wsh-NavBar-a" ng-class="{ 'wsh-NavBar-a--activeInsetRight': navItem.active, 'wsh-NavBar-a--inactiveInsetRight': !navItem.active }">
+                        <h2 class="wsh-u-sectionHeader"><span class="wsh-u-firstWord">{{ navItem.firstWord }}</span> {{ navItem.nextWords }}</h2>
+                    </a>
+                </nav>
+                <main role="main" aria-labelledby="main-header" class="wsh-MainContent">
+                    <!-- Angular SPA transclusion here -->
+                    <ng-view></ng-view>
+                </main>
+            </div><!-- /.wsh-u-Row -->
+            <div class="wsh-u-Row">
+                <nav role="navigation" aria-label="Navigation Buttons" class="wsh-NavBar wsh-NavBar--bottom wsh-u-smallOnly">
+                    <a role="button" href="" ng-repeat="navItem in navBar track by $index" ng-click="changePath(navItem.url, $event)" class="wsh-NavBar-a" ng-class="{ 'wsh-NavBar-a--activeBottom': navItem.active, 'wsh-NavBar-a--inactiveBottom': !navItem.active }">
+                        <h2 class="wsh-u-sectionHeader"><span class="wsh-u-firstWord">{{ navItem.firstWord }}</span> {{ navItem.nextWords }}</h2>
+                    </a>
+                </nav>
+            </div>
+            
+            <div class="wsh-Footer-spacer"></div>
+            <footer class="wsh-Footer">         
+                <small-print></small-print>
+            </footer>
         </div>
-        
-        <footer class="wsh-Footer">
-            <small-print></small-print>
-        </footer>
         
         <wsh-dialog ng-if="dialog.active" data="dialog" close="closeDialog(responseCode)"></wsh-dialog>
     </body>
