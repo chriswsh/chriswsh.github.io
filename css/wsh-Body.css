@@ -1,0 +1,13 @@
+/* ======================================== */
+/* General Styles                           */
+/* ======================================== */
+/* Baseline Grid is spaced at 0.625rem      */
+/* Body text takes up 2 gridlines - 1.25rem */
+/* ======================================== */
+.wsh-Body {
+    margin: 0 auto;
+    font-family: 'Roboto Condensed', Tahoma, Verdana, sans-serif;
+    font-size: 1.75em; /* 1.75 * 10px = 17.5px base font size */
+    line-height: 1.25em;
+    color: #4b5068; /* #1f243b; */
+}

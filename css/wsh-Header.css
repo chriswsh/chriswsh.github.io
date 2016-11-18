@@ -1,0 +1,16 @@
+/* ================ */
+/* Header Component */
+/* ================ */
+.wsh-Header {
+    background-image: url('/images/header.jpg');
+    border-bottom: 3px double #3238ae;
+    margin-bottom: 1em;
+    padding-left: 2em;
+    padding-top: 2em;
+    overflow: hidden;
+}
+
+.wsh-Header-a, .wsh-Header-a:hover {
+    text-decoration: none;
+    color: inherit;
+}

@@ -1,0 +1,89 @@
+/* ======================== */
+/* Navigation Bar Component */
+/* ======================== */
+.wsh-NavBar {
+
+}
+
+.wsh-NavBar--insetRight {
+    float: right;
+    position: relative;
+    width: 23em;
+    top: 2em;
+    margin-left: 2.5em;
+    margin-bottom: 2.5em;
+    -webkit-box-shadow: 2px 2px 6px #1b2090;
+    -moz-box-shadow: 2px 2px 6px #1b2090;
+    box-shadow: 2px 2px 6px #1b2090;
+}
+
+.wsh-NavBar--insetRight .wsh-NavBar-a {
+
+}
+
+.wsh-NavBar-a {
+    display: block;
+    padding: 1em 1em 1em 2em;
+    background-image: url('/images/nav-bg-light2.png');
+    border-top: 1px solid #4d52bd;
+
+    text-decoration: none;
+}
+
+.wsh-NavBar-a:link {
+    text-decoration: none;
+}
+
+.wsh-NavBar-a:visited {
+    text-decoration: none;
+}
+
+.wsh-NavBar-a:hover {
+    cursor: pointer;
+    border-left: 10px dashed #4d52bd;
+    border-right: 10px solid #4d52bd;
+    background-position: -10px 0px;   
+    text-decoration: none;
+}
+
+.wsh-NavBar-a:active {
+    text-decoration: none;
+}
+
+.wsh-NavBar-a:last-child {
+    border-bottom: 1px solid #4d52bd;
+}
+
+.wsh-NavBar-a--inactiveInsetRight {
+    border-left: 1px solid #4d52bd;
+    border-right: 1px solid #4d52bd;
+}
+
+.wsh-NavBar-a--inactiveInsetRight:hover, .wsh-NavBar-a--inactiveInsetRight:focus {
+    outline: none;
+    position: relative;
+    width: 25em;
+    right: 2em;
+    background-position: 0px 0px;
+    border-left: 1px solid #4d52bd;
+    border-right: 10px solid #4d52bd;
+}
+
+.wsh-NavBar-a--activeInsetRight {
+    transition: all 200ms ease-in-out;
+    -webkit-transition: all 200ms ease-in-out;
+    position: relative;
+    width: 25em;
+    right: 2em;
+    border-left: 1px solid #4d52bd;
+    border-right: 10px solid #4d52bd;
+}
+
+.wsh-NavBar-a--activeInsetRight:hover, .wsh-NavBar-a-activeInsetRight:focus {
+    background-position: 0px 0px;
+    border-left: 1px solid #4d52bd;
+}
+
+.wsh-NavBar-a--activeBottom {
+    
+}

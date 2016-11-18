@@ -1,0 +1,40 @@
+/* ================ */
+/* Footer Component */
+/* ================ */
+.wsh-Footer {
+    text-transform: lowercase;
+    background-image: url('/images/footer-bg-high.jpg');
+    padding: 0.5em 1em;
+    font-family: 'alegreya-regular';
+    color: #d4bb2a;
+    clear: both;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3.5em;
+    width: 100%;
+}
+
+.wsh-Footer em {
+    font-weight: normal;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+.wsh-Footer a {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0;
+    color: #d4bb2a;
+    font-weight: normal;
+    border: none;
+}
+
+.wsh-Footer a:hover {
+    color: #e7d152;
+    border: none;
+}
+
+.wsh-Footer-spacer {
+    padding-bottom: 3.5em;
+}
