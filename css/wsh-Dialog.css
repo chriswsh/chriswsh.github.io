@@ -1,0 +1,81 @@
+/* ================ */
+/* Dialog Component */
+/* ================ */
+
+.wsh-Dialog {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;    
+}
+
+.wsh-Dialog--nonmodal {
+    pointer-events: none;
+}
+
+.wsh-Dialog--modal {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.wsh-Dialog--modal:before, .wsh-Dialog--nonmodal:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.wsh-Dialog-contentFrame {
+    background-color: white;
+    background-image: url('/images/header.jpg');
+    width: 70%;
+    max-width: 35em;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 1.25em;
+    pointer-events: auto;
+}
+
+.wsh-Dialog-header {
+}
+
+.wsh-Dialog-contentTitle {
+    text-align: center;
+    font-size: 2.25em;
+    line-height: 1.1111111111em;
+    margin: 0 0 0.555555555555555em 0;
+    font-weight: bold;
+    font-family: 'alegreya-regular';
+    color: #4b5068;
+}
+
+.wsh-Dialog-message {
+    width: 100%;
+    background-color: white;
+    text-align: left;
+    padding: 1.25em;
+    border: 1px solid #3238ae;
+    margin-bottom: 1.25em;
+}
+
+.wsh-Dialog-button {
+    float: left;
+    width: 25%;
+    min-width: 6em;
+    padding: 0.625em 1.25em;
+    margin-right: 1em;
+    background-color: white;
+    border-left: 1px solid #4d52bd;
+    border-top: 1px solid #4d52bd;
+    border-bottom: 1px solid #4d52bd;
+    border-right: 1px solid #4d52bd;   
+    font-family: 'alegreya-regular';
+    font-weight: bold;
+}
+
+.wsh-Dialog-button:hover {
+    border-right: 10px solid #4d52bd;
+}

@@ -1,0 +1,48 @@
+/* ================= */
+/* Flexbox Component */
+/* Thx to CSSTricks  */
+/* ================= */
+
+.wsh-Flexbox {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.wsh-Flexbox-sidebarLeft {
+    -webkit-box-flex: 0 1 auto;
+    -moz-box-flex: 0 1 auto;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    width: 20%;
+    max-width: 20%;
+    min-width: 7em;
+    margin: 0 1em 0 0;
+    order: 1;
+}
+
+.wsh-Flexbox-mainContent {
+    -webkit-box-flex: 1 1 auto;
+    -moz-box-flex: 1 1 auto;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    width: 60%;
+    order: 2;
+}
+
+.wsh-Flexbox-sidebarRight {
+    -webkit-box-flex: 0 1 auto;
+    -moz-box-flex: 0 1 auto;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    width: 20%;
+    max-width: 20%;
+    min-width: 7em;
+    margin: 0 0 0 1em;
+    order: 3;
+}

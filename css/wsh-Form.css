@@ -1,0 +1,58 @@
+/* ============== */
+/* Form Component */
+/* ============== */
+
+.wsh-Form {
+
+}
+
+.wsh-Form-group {
+    margin-bottom: 1.25em;
+}
+
+.wsh-Form-label {
+    display: block;
+    margin-bottom; 0.625em;
+}
+
+.wsh-Form-text {
+    width: 22em;
+    max-width: 95%;
+    display: block;
+    border-radius: 1em;
+    padding: 0.625em;
+    margin-bottom: 0.625em;
+    border: 1px solid #4b5068;
+}
+
+.wsh-Form-text:focus {
+    outline: none;
+    border: 1px solid #4d52bd;
+    -webkit-box-shadow: 2px 2px 6px #1b2090;
+    -moz-box-shadow: 2px 2px 6px #1b2090;
+    box-shadow: 2px 2px 6px #1b2090; 
+}
+
+.wsh-Form-textAreaInput {
+    width: 22em;
+    max-width: 95%;
+    display: block;
+    resize: none;
+    
+    border-radius: 1em;
+    padding: 0.625em;
+    margin-bottom: 0.625em;
+    border: 1px solid #4b5068;
+}
+
+.wsh-Form-textAreaInput:focus {
+    outline: none;
+    border: 1px solid #4d52bd;
+    -webkit-box-shadow: 2px 2px 6px #1b2090;
+    -moz-box-shadow: 2px 2px 6px #1b2090;
+    box-shadow: 2px 2px 6px #1b2090;    
+}
+
+.wsh-Form-error {
+    color: red;
+}

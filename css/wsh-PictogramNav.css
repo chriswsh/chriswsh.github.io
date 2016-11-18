@@ -1,0 +1,23 @@
+/* ======================= */
+/* Pictogram Nav Component */
+/* ======================= */
+.wsh-PictogramNav {
+    padding: 0 0 1em 1em;
+}
+
+.wsh-PictogramNav-a {
+    text-decoration: none;
+    font-size: 2em;
+    color: #4d52bd;
+}
+
+.wsh-PictogramNav-a:hover, .wsh-PictogramNav-a:active {
+    color: #1b2090;
+}
+
+[data-icon]:before {
+    font-family: 'pictograms';
+    font-weight: normal;
+    content: attr(data-icon);
+    speak: none;
+}

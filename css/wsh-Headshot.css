@@ -1,0 +1,9 @@
+/* ================== */
+/* Headshot Component */
+/* ================== */
+
+.wsh-Headshot {
+    float: left;
+    width: 10em;
+    margin: 0 1em 0.5em 0;
+}

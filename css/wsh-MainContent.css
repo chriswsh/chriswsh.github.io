@@ -1,0 +1,28 @@
+/* ======================================== */
+/* Main Content Component                   */
+/* ======================================== */
+/* Baseline Grid is spaced at 0.625rem      */
+/* Body text takes up 2 gridlines - 1.25rem */
+/* ======================================== */
+.wsh-MainContent {
+    padding: 0 3em 1em 3em;
+}
+
+/* All body text should be wrapped in <p> tags */
+.wsh-MainContent p a {
+    text-decoration: none;
+    color: #3238ae;
+    font-weight: bold;
+    padding: 0 0 0 3px;
+    border-left: 2px solid transparent;
+}
+
+.wsh-MainContent p a:hover {
+    border-left: 2px dashed #4d52bd;
+    text-decoration: none;
+    color: #4d52bd;
+}
+
+.wsh-MainContent p {
+    margin: 0 0 1.25em 0;
+}
