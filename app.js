@@ -426,9 +426,18 @@ myApp.directive(`wshDialog`, function($compile) {
 });
 */
 
-// Testing AJAX service
-myApp.service(`contactService`, [`$log`, `$http`, function($log, $http){
-    // To Do - move email code from controller to service
+myApp.service(`emailService`, [`$http`, function($http){
+    var _address = ``;
+    
+    this.setAddress = function (newAddress) {
+        if (typeof newAddress === `string`) {
+            _address = newAddress;
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 }]);
 
 // Redirect Service
