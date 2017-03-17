@@ -16,7 +16,7 @@
 }
 
 .wsh-Form-text {
-    width: 22em;
+    width: 21em;
     max-width: 95%;
     display: block;
     border-radius: 1em;
@@ -34,7 +34,7 @@
 }
 
 .wsh-Form-textAreaInput {
-    width: 22em;
+    width: 21em;
     max-width: 95%;
     display: block;
     resize: none;
