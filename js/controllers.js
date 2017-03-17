@@ -25,8 +25,7 @@ angular.module(`portfolioApp`).controller(`parentController`, [`$scope`, `$locat
     $scope.emailDirty = false;
     
     $scope.changePath = function(path) {
-        if ($location.path())
-        $location.path(path);
+        if ($location.path()) $location.path(path);
     }
     
     $scope.resetEmail = function () {
