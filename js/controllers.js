@@ -2,7 +2,7 @@
 angular.module(`portfolioApp`).controller(`parentController`, [`$scope`, `$location`, `$http`, `$window`, `navProvider`, `portfolioProvider`, `dialogProvider`, `redirectService`, function($scope, $location, $http, $window, navProvider, portfolioProvider, dialogProvider, redirectService) {
 // Parent Controller
     
-    _responseCode = {
+    let _responseCode = {
         yes: 1,
         no: 0,
         cancel: -1
