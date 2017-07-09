@@ -41,7 +41,7 @@
         <script src="js/full-min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/normalize-min.css">
-        <link rel="stylesheet" type="text/css" href="css/full-min.css">
+        <link rel="stylesheet" type="text/css" href="css/full.css">
     </head>
     
     <body ng-cloak class="wsh-Body">  
@@ -61,7 +61,7 @@
                 </div>
             </header>
 
-            <div class="wsh-u-Row">
+            <div class="wsh-u-Row wsh-u-flexGrow">
                 <nav role="navigation" aria-label="Navigation Buttons" class="wsh-NavBar wsh-NavBar--insetRight wsh-u-largeOnly">
                     <!-- Note to Self: must track by $index when iterating over arrays, but not objects -->
                     <a role="button" href="" ng-repeat="navItem in navBar track by $index" ng-click="changePath(navItem.url)" class="wsh-NavBar-a" ng-class="{ 'wsh-NavBar-a--activeInsetRight': navItem.active, 'wsh-NavBar-a--inactiveInsetRight': !navItem.active }">
@@ -73,7 +73,7 @@
                     <ng-view></ng-view>
                 </main>
             </div><!-- /.wsh-u-Row -->
-            <div class="wsh-u-Row">
+            <div class="wsh-u-Row wsh-u-flexNoGrow">
                 <nav role="navigation" aria-label="Navigation Buttons" class="wsh-NavBar wsh-NavBar--bottom wsh-u-smallOnly">
                     <a role="button" href="" ng-repeat="navItem in navBar track by $index" ng-click="changePath(navItem.url, $event)" class="wsh-NavBar-a" ng-class="{ 'wsh-NavBar-a--activeBottom': navItem.active, 'wsh-NavBar-a--inactiveBottom': !navItem.active }">
                         <h2 class="wsh-u-sectionHeader"><span class="wsh-u-firstWord">{{ navItem.firstWord }}</span> {{ navItem.nextWords }}</h2>
@@ -81,7 +81,6 @@
                 </nav>
             </div>
             
-            <div class="wsh-Footer-spacer"></div>
             <footer class="wsh-Footer">         
                 <small-print></small-print>
             </footer>

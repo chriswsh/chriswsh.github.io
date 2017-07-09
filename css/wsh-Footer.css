@@ -8,11 +8,10 @@
     font-family: 'alegreya-regular';
     color: #d4bb2a;
     clear: both;
-    position: absolute;
-    bottom: 0;
-    left: 0;
     height: 3.5em;
     width: 100%;
+    
+    flex-grow: 0;
 }
 
 .wsh-Footer em {

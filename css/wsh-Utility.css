@@ -105,8 +105,19 @@
 .wsh-u-fullHeightWrapper {
     min-height: 100%;
     position: relative;
+    
+    display: flex;
+    flex-direction: column;
 }
 
 .wsh-u-Spacer {
     height: 3.75em;
+}
+
+.wsh-u-flexGrow {
+    flex-grow: 1;
+}
+
+.wsh-u-flexNoGrow {
+    flex-grow: 0;
 }
