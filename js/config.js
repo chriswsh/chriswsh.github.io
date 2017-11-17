@@ -72,7 +72,7 @@ angular.module(`portfolioApp`).config([`navProviderProvider`, function(navProvid
         imgSmallAlt: `My New Author Website`,
         imgLarge: `/images/new-book-large.png`,
         imgLargeAlt: `My New Author Website`,
-        text: [`<p>My new author website is a React/Redux front-end perched on top of a headless Drupal 8 API.</p><p>For those not interested in technical details, check out the intro animation at <a href="www.chriswsh.com">www.chriswsh.com</a>.</p>`]
+        text: [`<p>My new author website is a React/Redux front-end perched on top of a headless Drupal 8 API.</p><p>For those not interested in technical details, check out the intro animation at <a href="//www.chriswsh.com">www.chriswsh.com</a>.</p>`]
         },
         {
         title: `The Long Shot Photography Contest`,
