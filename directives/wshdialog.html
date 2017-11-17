@@ -5,8 +5,7 @@
             <h1 id="wsh-Dialog-title" class="wsh-Dialog-contentTitle"><span class="wsh-u-firstWord">{{ data.titleFirstWord }}</span> {{ data.titleRestWords }}</h1>
         </header>
         <div class="wsh-Dialog-message wsh-u-shadow">
-            <p ng-repeat="paragraph in data.message track by $index">
-                {{ paragraph }}
+            <p ng-repeat="paragraph in data.message track by $index" ng-bind-html="paragraph">
             </p>
         </div>
         <button ng-if="data.okLabel" role="button" type="button" class="wsh-Dialog-button wsh-u-shadow" ng-click="close({responseCode: 1})">{{ data.okLabel }}</button>
