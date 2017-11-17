@@ -22,9 +22,10 @@
 }
 
 .wsh-u-sectionSubheader {
-    font-size: 1.25em; /* 1.25 rem */
-    line-height: 1.5em; /* 1.25 * 1.5em = 1.875 rem for 3 lines vertical rhythm */
-    font-weight: bold;
+    /* font-size: 1.25em; /* 1.25 rem */
+    /* line-height: 1.5em; /* 1.25 * 1.5em = 1.875 rem for 3 lines vertical rhythm */
+    font-size: 1.5em; /* 1.5 rem */
+    line-height: 1.25em; /* 1.25 * 1.5em = 1.875rem for 3 lines vertical rhythm */   font-weight: bold;
     font-family: 'alegreya-regular';
 }
 
